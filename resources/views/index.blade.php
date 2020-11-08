@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>CV Web Prototype</title>
+		<title>CV Website</title>
 		<meta charset="utf-8">
 		<!-- Bootstrap 4 is mobile-first -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,7 @@
 		<!-- BS4 CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 		<!-- Custom CSS -->
-		<link rel="stylesheet" type="text/css" href="../resources/css/style.css">
+		<link rel="stylesheet" type="text/css" href="./resources/css/style.css">
 		<!-- JavaScript -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -23,22 +23,22 @@
 		    <div class="modal-content">
 		      <!-- Modal Header -->
 		      <div class="modal-header">
-		        <h4 class="modal-title">Take my CV</h4>
+		        <h4 class="modal-title">{{__('take_cv')}}</h4>
 		        <button type="button" class="close" data-dismiss="modal">&times;</button>
 		      </div>
 		      <!-- Modal body -->
 		      <div class="modal-body">
-		        <p class="w-100 ">Please input your email to take my CV pdf.</p>
+		        <p class="w-100 ">{{__('input_email_to_take')}}</p>
 		        <form class="text-center">
 		        	<div class="form-group">
-		        		<input class="form-control w-75 float-left m-0" type="text" name="email" minlength="11" maxlength="255" placeholder="Please input your email">
-		        		<input class="float-right btn btn-primary w-25" type="submit" value="Send">
+		        		<input class="form-control w-75 float-left m-0" type="text" name="email" minlength="11" maxlength="255" placeholder="{{__('ip_email')}}">
+		        		<input class="float-right btn btn-primary w-25" type="submit" value="{{__('send')}}">
 		        	</div>
 		        </form>
 		      </div>
 		      <!-- Modal footer -->
 		      <div class="modal-footer">
-		        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-danger" data-dismiss="modal">{{__('close')}}</button>
 		      </div>
 		    </div>
 		  </div>
@@ -47,7 +47,7 @@
 			<!-- Menu -->
 			<nav class="navbar navbar-expand-md bg-dark navbar-dark pl-5 pr-5">
 				<!-- Brand -->
-				<a class=" navbar-brand" href="#">Tran Viet Si</a>
+				<a class=" navbar-brand" href="#">{{__('tran_viet_si')}}</a>
 				<!-- Toggle/collapsibe Button -->
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 					<span class="navbar-toggler-icon"></span>
@@ -57,31 +57,63 @@
 					<ul class="navbar-nav">
 						<li class="navbar-item dropdown">
 							<a id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">
-								Content
+								{{__('content')}}
 							</a>
 							<ul aria-labelledby="dropdownMenu1" class="dropdown-menu shadow">
-		            <li><a href="#" location="#summary" class="dropdown-item links-scroll">Summary</a></li>
-		            <li><a href="#" location="#skill" class="dropdown-item links-scroll">Skill</a></li>
-		            <li><a href="#" location="#experience" class="dropdown-item links-scroll">Experience</a></li>
-		            <li><a href="#" location="#contact-me" class="dropdown-item links-scroll">Contact me</a></li>
+		            <li>
+		            	<a href="#" location="#summary" class="dropdown-item links-scroll">
+		            		{{__('summary')}}
+		            	</a>
+		            </li>
+		            <li>
+		            	<a href="#" location="#skill" class="dropdown-item links-scroll">
+		            		{{__('skill')}}
+		            	</a>
+		            </li>
+		            <li>
+		            	<a href="#" location="#experience" class="dropdown-item links-scroll">
+		            		{{__('experience')}}
+		            	</a>
+		            </li>
+		            <li>
+		            	<a href="#" location="#contact-me" class="dropdown-item links-scroll">
+		            		{{__('contact_me')}}
+		            	</a>
+		            </li>
 		          </ul>
 						</li>
 						<li class="navbar-item dropdown">
 							<a id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">
-								Language
+								{{__('language')}}
 							</a>
 							<ul aria-labelledby="dropdownMenu1" class="dropdown-menu border-0 shadow">
-		            <li><a href="#" class="dropdown-item">English</a></li>
-		            <li><a href="#" class="dropdown-item">Vietnamese</a></li>
+		            <li>
+		            	<a href="{{route('lang',['lang'=> 'en'])}}" class="dropdown-item">
+		            		{{__('english')}}
+		            	</a>
+		            </li>
+		            <li>
+		            	<a href="{{ route('lang',['lang' => 'vi']) }}" class="dropdown-item">
+		            		{{__('vietnamese')}}
+		            	</a>
+		            </li>
 		          </ul>
 						</li>
 						<li class="navbar-item dropdown">
 							<a id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">
-								Take PDF
+								{{__('take_pdf')}}
 							</a>
 							<ul aria-labelledby="dropdownMenu1" class="dropdown-menu border-0 shadow">
-		            <li><a class="dropdown-item" data-toggle="modal" data-target="#myModal" href="#">Send email</a></li>
-		            <li><a href="#" class="dropdown-item">Download</a></li>
+		            <li>
+		            	<a class="dropdown-item" data-toggle="modal" data-target="#myModal" href="#">
+		            		{{__('send_email')}}
+		            	</a>
+		            </li>
+		            <li>
+		            	<a href="#" class="dropdown-item">
+		            		{{__('download')}}
+		            	</a>
+		            </li>
 		          </ul>
 						</li>
 					</ul>
@@ -92,13 +124,11 @@
 			<!-- Banner -->
 			<div class="row">
 				<div class="col-12 bg-white">
-					<img class="d-block w-100" src="https://contego.com/wp-content/uploads/2014/07/1000-X-300-PNG.png">
+					<img class="d-block w-100" src="https://contego.com/wp-content/uploads/2014/07/1000-X-300-PNG.png" alt="avatar">
 						<div class="banner-box text-center">
-							<h1 class="text-primary">Hi! I'm Tran Viet Si</h1>
+							<h1 class="text-primary">{{__('Hi!')}}</h1>
 							<p>
-								I'm 21 years old, just graduated.<br>
-								Now, i'm looking for a suitable job.<br>
-								If you like my CV, please contact me by email: "vietsi1999@gmail.com".
+								{{__('introduce')}}
 							</p>
 						</div>
 				</div>
@@ -110,7 +140,9 @@
 				<div class="row summary mt-4 pt-2 border rounded bg-white">
 					<!-- <div class="row"> -->
 						<div class="col-12">
-							<div class="title text-center text-primary" id="summary"><h1>SUMMARY</h1></div>
+							<div class="title text-center text-primary" id="summary">
+								<h1>{{__('summary')}}</h1>
+							</div>
 							<hr>
 						</div>
 						<!-- Avatar -->
@@ -123,28 +155,28 @@
 							<div class="row m-0 mb-3 w-100">
 								<!-- Personal profile -->
 								<div class="col-md-4 mb-3 pt-3 pb-3 personal-profile ">
-									<h2><center>Personal profile</center></h2>
+									<h2><center>{{__('personal_profile')}}</center></h2>
 									<table class="pt-3 border-0">
 										<tbody>
 											<tr>
-												<td><b>Gender:</b></td>
-												<td>Male</td>
+												<td><b>{{__('gender')}}:</b></td>
+												<td>{{__('male')}}</td>
 											</tr>
 											<tr>
-												<td><b>Birthday:</b></td>
+												<td><b>{{__('birthday')}}:</b></td>
 												<td>17/02/1999</td>
 											</tr>
 											<tr>
-												<td><b>Marital status:</b></td>
-												<td>Single</td>
+												<td><b>{{__('marital_status')}}:</b></td>
+												<td>{{__('single')}}</td>
 											</tr>
 											<tr>
-												<td><b>Nationality:</b></td>
-												<td>Vietnamese</td>
+												<td><b>{{__('nationality')}}:</b></td>
+												<td>{{__('vietnam')}}</td>
 											</tr>
 											<tr>
-												<td><b>Country:</b></td>
-												<td>Viet Nam</td>
+												<td><b>{{__('country')}}:</b></td>
+												<td>{{__('vietnam')}}</td>
 											</tr>
 										</tbody>
 									</table>
@@ -152,28 +184,28 @@
 								<!-- End Personal profile -->
 								<!-- Enducation -->
 								<div class="col-md-8 mb-3 pt-3 pb-3 bg-light">
-									<h2 class="w-100"><center>Education</center></h2>
+									<h2 class="w-100"><center>{{__('education')}}</center></h2>
 									<table class="pt-3 border-0">
 										<tbody >
 											<tr>
-												<td><b>School:</b></td>
-												<td>College of Information Technology - DaNang University</td>
+												<td><b>{{__('school')}}:</b></td>
+												<td>{{__('school_cit')}}</td>
 											</tr>
 											<tr>
-												<td><b>Completion date:</b></td>
+												<td><b>{{__('completion_date')}}:</b></td>
 												<td>5/2020</td>
 											</tr>
 											<tr>
-												<td><b>Major:</b></td>
-												<td> Information Technology</td>
+												<td><b>{{__('major')}}:</b></td>
+												<td>{{__('IT')}}</td>
 											</tr>
 											<tr>
-												<td><b>GPA:</b></td>
+												<td><b>{{__('gpa')}}:</b></td>
 												<td>3.54 / 4.0</td>
 											</tr>
 											<tr>
-												<td><b>Graduation grade:</b></td>
-												<td>Good</td>
+												<td><b>{{__('graduation_grade')}}:</b></td>
+												<td>{{__('good')}}</td>
 											</tr>
 										</tbody>
 									</table>
@@ -183,7 +215,7 @@
 							<!-- Text summary -->
 							<div class="row w-100 m-0 pl-1 pr-1">
 								<p class="mt-2 pt-2 text-justify">
-									My truly motivation is that challenge myself and thus pursuing my passion. To me, building a program or a website useful to the need of the people is my deepest desire. I sincerely wish that i would be able to contribute to my country’s development scientifically and economically.
+									{{__('introduce_2')}}
 								</p>
 							</div>
 							<!-- End text summary -->
@@ -194,7 +226,9 @@
 				<!-- Skill -->
 				<div class="row skill mt-4 pt-2 border rounded bg-white">
 					<div class="col-12">
-						<div class="text-center text-primary" id="skill"><h1>SKILL</h1></div>
+						<div class="text-center text-primary" id="skill">
+							<h1>{{__('skill')}}</h1>
+						</div>
 						<hr>
 					</div>
 					<!-- Skill box 1 -->
@@ -252,9 +286,9 @@
 								<li>Spring Tool Suite 3</li>
 							</ul>
 							<br>
-							<h5 class="text-center">OTHER LANGUAGE</h5>
+							<h5 class="text-center">{{__('other_language')}}</h5>
 							<ul>
-								<li>English</li>
+								<li>{{__('english')}}</li>
 							</ul>
 						</div>
 					</div>
@@ -264,7 +298,9 @@
 				<!-- Experience -->
 				<div class="row skill mt-4 pt-2 border rounded bg-white">
 					<div class="col-12">
-						<div class="text-center text-primary" id="experience"><h1>EXPERIENCE</h1></div>
+						<div class="text-center text-primary" id="experience">
+							<h1>{{__('experience')}}</h1>
+						</div>
 						<hr>
 					</div>
 					<!-- Exp1 -->
@@ -279,10 +315,10 @@
 							</div>
 						</div>
 						<div class="content-exp mt-5 p-5 text-justify">
-							<h4>Fresher Java - FPT Software Danang</h4>
+							<h4>{{__('FA_fpt')}}</h4>
 							<br>
 							<p>
-								Studying SRS doc, Q&A accurately and effectively. Having proficiency in writing UT test case, create prototypes with Bootstrap and Jquery, building website by using Spring Framework. Those are the knowledge and skills I have gained when being training here.
+								{{__('detail_job')}}
 							</p>
 						</div>
 					</div>
@@ -295,14 +331,14 @@
 			<footer class="bg-dark" id="contact-me">
 				<div class="row p-3 text-center text-white">
 					<div class="col-12">
-						<h4>CONTACT ME</h4>
+						<h4>{{__('contact_me')}}</h4>
 						<hr>
 					</div>
 					<div class="col-md-4">
-						ADDRESS<br>
+						{{__('address')}}<br>
 						<a href="#">
 							<i class="fas fa-map-marker-alt"></i>
-							CIT dorm, Nam Ky Khoi Nghia street, Hoa Quy Ward, Ngu Hanh Son District, Da Nang, Vietnam
+							{{__('address_value')}}
 						</a>
 					</div>
 					<div class="col-md-4">
@@ -313,7 +349,7 @@
 						</a>
 					</div>
 					<div class="col-md-4">
-						PHONE<br>
+						{{__('phone')}}<br>
 						<a href="#">
 							<i class="fas fa-mobile-alt"></i>
 							0762798615
