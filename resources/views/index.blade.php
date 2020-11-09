@@ -124,7 +124,7 @@
 			<!-- Banner -->
 			<div class="row">
 				<div class="col-12 bg-white">
-					<img class="d-block w-100" src="https://contego.com/wp-content/uploads/2014/07/1000-X-300-PNG.png">
+					<img class="d-block w-100" src="https://contego.com/wp-content/uploads/2014/07/1000-X-300-PNG.png" alt="avatar">
 						<div class="banner-box text-center">
 							<h1 class="text-primary">{{__('Hi!')}}</h1>
 							<p>
