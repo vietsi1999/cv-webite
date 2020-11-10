@@ -40,12 +40,7 @@
   "other_language" : "NGOẠI NGỮ",
   "FA_fpt" : "Fresher Java - FPT Software Đà Nẵng",
   "detail_job" : "Đọc và tìm hiểu tài liệu SRS, Q&A một cách chính xác và hiệu quả. Biết cách viết Unit Test, tạo prototypes với Boostrap và Jquery, xây dựng một website bằng Spring Framework. Đó là những kiến thức và kỹ năng tôi có được khi được đào tạo tại đây.",
-  "address" : "ĐỊA CHỈ",
+    "address" : "ĐỊA CHỈ",
   "phone" : "ĐIỆN THOẠI",
-  "address_value" : "Ký túc xá CIT, đường Nam Kỳ Khởi Nghĩa, phường Hòa Quý, quận Ngũ Hành Sơn, thành phố Đà Nẵng, Việt Nam",
-  "send_success" : "Gửi CV thành công!",
-  "send_error" : "Gửi CV không thành công!",
-  "mail_subject" : "CV - Trần Viết Sỉ",
-  "mail_content, :name" : "Chào :name.\nCảm ơn bạn đã quan tâm.\nDưới đây là CV của tôi, mong bạn sẽ thích nó."
-
+  "address_value" : "Ký túc xá CIT, đường Nam Kỳ Khởi Nghĩa, phường Hòa Quý, quận Ngũ Hành Sơn, thành phố Đà Nẵng, Việt Nam"
   }

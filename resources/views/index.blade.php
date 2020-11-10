@@ -122,7 +122,7 @@
 				<!-- End navbar links -->
 			</nav>
 			<!-- End menu -->
-
+      
 			<!-- Message -->
 			@if(Session::has('message'))
 				<p class="alert alert-{{ Session::get('message')[0] }}">{{ Session::get('message')[1] }}</p>
