@@ -10,7 +10,7 @@
 		<!-- BS4 CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 		<!-- Custom CSS -->
-		<link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+		<link rel="stylesheet" type="text/css" href="../resources/css/style.css">
 		<!-- JavaScript -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -29,7 +29,8 @@
 		      <!-- Modal body -->
 		      <div class="modal-body">
 		        <p class="w-100 ">{{__('input_email_to_take')}}</p>
-		        <form class="text-center">
+		        <form class="text-center" action="{{route('send_mail')}}" method="GET">
+		        	{{ csrf_field() }}
 		        	<div class="form-group">
 		        		<input class="form-control w-75 float-left m-0" type="text" name="email" minlength="11" maxlength="255" placeholder="{{__('ip_email')}}">
 		        		<input class="float-right btn btn-primary w-25" type="submit" value="{{__('send')}}">
@@ -121,10 +122,17 @@
 				<!-- End navbar links -->
 			</nav>
 			<!-- End menu -->
+      
+			<!-- Message -->
+			@if(Session::has('message'))
+				<p class="alert alert-{{ Session::get('message')[0] }}">{{ Session::get('message')[1] }}</p>
+			@endif
+			<!-- End message -->
+
 			<!-- Banner -->
 			<div class="row">
 				<div class="col-12 bg-white">
-					<img class="d-block w-100" src="https://contego.com/wp-content/uploads/2014/07/1000-X-300-PNG.png" alt="avatar">
+					<img class="d-block w-100" src="https://contego.com/wp-content/uploads/2014/07/1000-X-300-PNG.png">
 						<div class="banner-box text-center">
 							<h1 class="text-primary">{{__('Hi!')}}</h1>
 							<p>

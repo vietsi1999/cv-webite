@@ -42,5 +42,9 @@
   "detail_job" : "Studying SRS doc, Q&A accurately and effectively. Having proficiency in writing UT test case, create prototypes with Bootstrap and Jquery, building website by using Spring Framework. Those are the knowledge and skills I have gained when being training here.",
   "address" : "ADDRESS",
   "phone" : "PHONE",
-  "address_value" : "CIT dorm, Nam Ky Khoi Nghia street, Hoa Quy Ward, Ngu Hanh Son District, Da Nang city, Vietnam"
+  "address_value" : "CIT dorm, Nam Ky Khoi Nghia street, Hoa Quy Ward, Ngu Hanh Son District, Da Nang city, Vietnam",
+  "send_success" : "Send CV successfully!",
+  "send_error" : "Send CV failed!",
+  "mail_subject" : "CV - Tran Viet Si",
+  "mail_content, :name" : "Hi :name.\nThank you for your interest. \nHere is my CV, hope you like it."
   }
