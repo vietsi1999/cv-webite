@@ -111,7 +111,7 @@
 		            	</a>
 		            </li>
 		            <li>
-		            	<a href="#" class="dropdown-item">
+		            	<a href="{{route('download_CV')}}" class="dropdown-item">
 		            		{{__('download')}}
 		            	</a>
 		            </li>
