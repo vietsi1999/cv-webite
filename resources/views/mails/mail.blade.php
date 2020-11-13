@@ -7,6 +7,6 @@
 	<p>
 		{{__('mail_content, :name',['name' => $email])}}
 	</p>
-	<a href="#">CV-tvs</a>
+	<a href="{{$host}}/downloadCV">Curriculum_Vitae_Tran_Viet_Si.pdf</a>
 </body>
 </html> 

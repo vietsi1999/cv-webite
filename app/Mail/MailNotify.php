@@ -16,9 +16,10 @@ class MailNotify extends Mailable
      *
      * @return void
      */
-    public function __construct($email)
+    public function __construct($email,$host)
     {
         $this->email = $email;
+        $this->host = $host;
     }
 
     /**
@@ -29,9 +30,10 @@ class MailNotify extends Mailable
     public function build()
     {
         return $this->subject(__('mail_subject'))
-                    ->view('mails\mail')
+                    ->view('mails/mail')
                     ->with([
                         'email' => $this->email,
+                        'host' => $this->host,
                     ]);
     }
 }

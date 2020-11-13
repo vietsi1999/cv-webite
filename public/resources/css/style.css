@@ -1,3 +1,8 @@
+*{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
 body{
 	background-image: url("https://d29fhpw069ctt2.cloudfront.net/photo/thumb/5094/Background-01.jpg");
 	background-repeat: repeat;
@@ -8,6 +13,9 @@ h1:hover, h4:hover{
 	-ms-animation: animation-h1 2s;
 	-o-animation: animation-h1 2s;
 	animation: animation-h1 2s;
+}
+a:hover{
+	text-decoration: none;
 }
 .banner-box{
 	position: absolute;

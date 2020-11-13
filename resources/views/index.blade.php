@@ -12,11 +12,12 @@
 		<!-- Custom CSS -->
 		<link rel="stylesheet" type="text/css" href="../resources/css/style.css">
 		<!-- JavaScript -->
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	</head>
-	<body>
+	<body class="w-100">
 		<!-- The Modal take CV -->
 		<div class="modal" id="myModal">
 		  <div class="modal-dialog">
@@ -45,8 +46,10 @@
 		  </div>
 		</div>
 		<!-- End modal take CV -->
+
+		<div class="container-fluid p-0">
 			<!-- Menu -->
-			<nav class="navbar navbar-expand-md bg-dark navbar-dark pl-5 pr-5">
+			<nav class="navbar navbar-expand-md bg-dark navbar-dark pl-5 pr-5 w-100">
 				<!-- Brand -->
 				<a class=" navbar-brand" href="#">{{__('tran_viet_si')}}</a>
 				<!-- Toggle/collapsibe Button -->
@@ -111,7 +114,7 @@
 		            	</a>
 		            </li>
 		            <li>
-		            	<a href="#" class="dropdown-item">
+		            	<a href="{{route('download_CV')}}" class="dropdown-item">
 		            		{{__('download')}}
 		            	</a>
 		            </li>
@@ -122,17 +125,15 @@
 				<!-- End navbar links -->
 			</nav>
 			<!-- End menu -->
-      
 			<!-- Message -->
 			@if(Session::has('message'))
 				<p class="alert alert-{{ Session::get('message')[0] }}">{{ Session::get('message')[1] }}</p>
 			@endif
 			<!-- End message -->
-
 			<!-- Banner -->
-			<div class="row">
-				<div class="col-12 bg-white">
-					<img class="d-block w-100" src="https://contego.com/wp-content/uploads/2014/07/1000-X-300-PNG.png">
+			<div class="row w-100 m-0">
+				<div class="col-12 bg-white w-100 p-0">
+					<img class="d-block w-100" src="https://contego.com/wp-content/uploads/2014/07/1000-X-300-PNG.png" alt="image banner">
 						<div class="banner-box text-center">
 							<h1 class="text-primary">{{__('Hi!')}}</h1>
 							<p>
@@ -142,6 +143,9 @@
 				</div>
 			</div>
 			<!-- End banner -->
+		</div>
+			
+
 			<!-- Container -->
 			<div class="container mb-3">
 				<!-- Summary -->
@@ -154,12 +158,12 @@
 							<hr>
 						</div>
 						<!-- Avatar -->
-						<div class="col-md-3 p-2 d-flex justify-content-center">
-							<img src="https://2.bp.blogspot.com/-OvzSvVKgZ-o/WKMFGVDf2bI/AAAAAAAAGYA/6nSIGSOOAmEpbfpfKsJ393SPT_FCHKPXgCEw/s1600/anh4x6.jpg" >
+						<div class="col-lg-3 p-2 d-flex justify-content-center">
+							<img src="..\resources\images\Avatar.png" alt="avatar">
 						</div>
 						<!-- End avatar -->
 						<!-- Profile -->
-						<div class="col-md-9 p-2 ">
+						<div class="col-lg-9 p-2 ">
 							<div class="row m-0 mb-3 w-100">
 								<!-- Personal profile -->
 								<div class="col-md-4 mb-3 pt-3 pb-3 personal-profile ">
@@ -316,9 +320,9 @@
 						<div class="w-100 d-flex justify-content-center">
 							<div class="time-exp">
 								<p>
-									3-2020<br>
-									to<br>
-									6/2020
+									3/2020<br>
+									-<br>
+									7/2020
 								</p>
 							</div>
 						</div>
@@ -328,23 +332,116 @@
 							<p>
 								{{__('detail_job')}}
 							</p>
+							<br>
+							<center><h5>{{__('projects')}}</h5></center>
+							<table border="1">
+								<tbody>
+									<tr>
+										<th>{{__('project_name')}}</th>
+										<td class="text-center">{{__('car_park')}}</td>
+									</tr>
+									<tr>
+										<th>{{__('time')}}</th>
+										<td>1 {{__('week')}}</td>
+									</tr>
+									<tr>
+										<th>{{__('position')}}</th>
+										<td>Full stack</td>
+									</tr>
+									<tr>
+										<th>{{__('project_description')}}</th>
+										<td>
+											{{__('pr_desc_content_car_park')}}
+										</td>
+									</tr>
+									<tr>
+										<th>{{__('my_responsibilities')}}</th>
+										<td>
+											{{__('my_responsibilities_content_car_park')}}
+										</td>
+									</tr>
+									<tr>
+										<th>{{__('technologies')}}</th>
+										<td>
+											Spring, Boostrap 4, SQLServer
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<br>
 						</div>
 					</div>
 					<!-- End exp1 -->
+
+					<!-- Exp2 -->
+					<div class="col-12 mb-2">
+						<div class="w-100 d-flex justify-content-center">
+							<div class="time-exp">
+								<p>
+									9/2017<br>
+									-<br>
+									12/2019
+								</p>
+							</div>
+						</div>
+						<div class="content-exp mt-5 p-5 text-justify">
+							<h4>Student - {{__('school_cit')}}</h4>
+							<br>
+							<center><h5>{{__('projects')}}</h5></center>
+							<table border="1">
+								<tbody>
+									<tr>
+										<th>{{__('project_name')}}</th>
+										<td class="text-center">{{__('dormitory_management_website')}}</td>
+									</tr>
+									<tr>
+										<th>{{__('time')}}</th>
+										<td>2 {{__('months')}}</td>
+									</tr>
+									<tr>
+										<th>{{__('position')}}</th>
+										<td>Full stack</td>
+									</tr>
+									<tr>
+										<th>{{__('project_description')}}</th>
+										<td>
+											{{__('pr_desc_content_dormitory_management_website')}}
+										</td>
+									</tr>
+									<tr>
+										<th>{{__('my_responsibilities')}}</th>
+										<td>
+											{{__('my_responsibilities_dormitory_management_website')}}
+										</td>
+									</tr>
+									<tr>
+										<th>{{__('technologies')}}</th>
+										<td>
+											Laravel, Ajax, Boostrap 4, MySQL
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<br>
+						</div>
+					</div>
+					<!-- End exp2 -->
 				</div>
 				<!-- End experience -->
 			</div>
 			<!-- End container -->
+		<!-- Container -->
+		<div class="container-fluid p-0">
 			<!-- Footer -->
 			<footer class="bg-dark" id="contact-me">
-				<div class="row p-3 text-center text-white">
+				<div class="row w-100 m-0 p-0 pt-3 pb-5 text-center text-white">
 					<div class="col-12">
 						<h4>{{__('contact_me')}}</h4>
 						<hr>
 					</div>
 					<div class="col-md-4">
 						{{__('address')}}<br>
-						<a href="#">
+						<a href="https://www.google.com/maps/place/K%C3%BD+T%C3%BAc+X%C3%A1+S%E1%BB%91+2+Tr%C6%B0%E1%BB%9Dng+Cao+%C4%90%E1%BA%B3ng+C%C3%B4ng+Ngh%E1%BB%87+Th%C3%B4ng+Tin+-+%C4%90%E1%BA%A1i+H%E1%BB%8Dc+%C4%90%C3%A0+N%E1%BA%B5ng/@15.9758237,108.2497726,16.44z/data=!4m12!1m6!3m5!1s0x3142108997dc971f:0x1295cb3d313469c9!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiB2w6AgVHJ1eeG7gW4gdGjDtG5nIFZp4buHdCAtIEjDoG4!8m2!3d15.9750106!4d108.2532374!3m4!1s0x31421088bc3313ef:0xb6b69ccb0aa44c72!8m2!3d15.9754959!4d108.2506641?hl=vi-VN">
 							<i class="fas fa-map-marker-alt"></i>
 							{{__('address_value')}}
 						</a>
@@ -366,7 +463,11 @@
 				</div>
 			</footer>
 			<!-- End footer -->
+		</div>
+		<!-- End container -->
+			
 	</body>
 	<!-- Custom JS -->
 	<script type="text/javascript" src="../resources/js/smooth-scrolling.js"></script>
+	<script type="text/javascript" src="../resources/js/change-nav-when-scroll.js"></script>
 </html>
