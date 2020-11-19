@@ -12,8 +12,9 @@ class SendMailController extends Controller
     public function sendMail(Request $request)
     {
     	$email = $request["email"];
+      $host = request()->getHost();
       // Truyen gia tri email qua MailNotify và gửi mail den $email
-      Mail::to($email)->send(new MailNotify($email));
+      Mail::to($email)->send(new MailNotify($email,$host));
       if (Mail::failures()) 
       {
         Session::flash('message', ['danger',__('send_error')]);
