@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Response;
 use Illuminate\Http\Request;
+use DomPDF;
 
 class DownloadController extends Controller
 {
     public function downloadCV()
     {
-    	$file="./resources/Curriculum_Vitae_Tran_Viet_Si.pdf";
-        return Response::download($file);
+    	return DomPDF::loadView('PDFs.cv')->download('Curriculum_Vitae_Tran_Viet_Si.pdf');
     }
 }
